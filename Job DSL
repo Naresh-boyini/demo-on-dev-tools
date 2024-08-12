@@ -1,0 +1,409 @@
+folder('CD') {
+    description('This folder contains all the CD pipeline jobs organized under QA and Dev')
+}
+
+folder('CI') {
+    description('This folder contains all the CD pipeline jobs organized under QA and Dev')
+}
+
+folder('CD/QA') {
+    description('This folder contains QA pipeline jobs within the CD folder')
+}
+
+folder('CD/Dev') {
+    description('This folder contains DEV pipeline jobs within the CD folder')
+}
+
+pipelineJob('CD/QA/1)Network-skeleton') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('Job-Dsl/network-skeleton-QA/Jenkinsfile')
+            }
+        }
+    }
+}
+
+pipelineJob('CD/QA/2)OpenVPN') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('Job-Dsl/OpenVPN-setup-QA/Jenkinsfile')
+            }
+        }
+    }
+}
+
+
+pipelineJob('CD/QA/3)SG') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('Job-Dsl/SG-QA/Jenkinsfile')
+            }
+        }
+    }
+}
+
+pipelineJob('CD/QA/4)Frontend') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('Job-Dsl/FRONTEND-QA/Jenkinsfile')
+            }
+        }
+    }
+}
+
+pipelineJob('CD/QA/5)Attendance') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('Job-Dsl/Attendence-setup-QA/Jenkinsfile')
+            }
+        }
+    }
+}
+
+pipelineJob('CD/QA/6)Employee') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('Job-Dsl/EMPLOYEE-INFRA/Employee_Setup_QA/Jenkinsfile')
+            }
+        }
+    }
+}
+
+pipelineJob('CD/QA/7)Salary') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('Job-Dsl/Salary-setup-QA/Jenkinsfile')
+            }
+        }
+    }
+}
+
+pipelineJob('CD/QA/8)Redis') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('Job-Dsl/Redis-infra-QA/Jenkinsfile')
+            }
+        }
+    }
+}
+
+pipelineJob('CD/QA/9)postgres') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('Job-Dsl/Postgres-setup-QA/Jenkinsfile')
+            }
+        }
+    }
+}
+
+pipelineJob('CD/QA/9.1)SycllaDB') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('Job-Dsl/Scylla-Infra/ScyllaDB_Setup_QA/Jenkinsfile')
+            }
+        }
+    }
+}
+
+
+pipelineJob('CD/Dev/1)Network-skeleton') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('Job-Dsl/Network-infra-Dev/Jenkinsfile')
+            }
+        }
+    }
+}
+
+pipelineJob('CD/Dev/2)OpenVPN') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('Job-Dsl/OpenVPN-setup-Dev/Jenkinsfile')
+            }
+        }
+    }
+}
+
+
+pipelineJob('CD/Dev/3)SG') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('Job-Dsl/SG-dev/Jenkinsfile')
+            }
+        }
+    }
+}
+
+pipelineJob('CD/Dev/4)Frontend') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('Job-Dsl/FRONTEND-dev/Jenkinsfile')
+            }
+        }
+    }
+}
+
+pipelineJob('CD/Dev/5)Attendance') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('Job-Dsl/ATTENDANCE-DEV/Jenkinsfile')
+            }
+        }
+    }
+}
+
+pipelineJob('CD/Dev/6)Employee') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('Job-Dsl/Employee-Dev/Jenkinsfile')
+            }
+        }
+    }
+}
+
+pipelineJob('CD/Dev/7)Salary') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('Job-Dsl/Salary-Dev/Jenkinsfile')
+            }
+        }
+    }
+}
+
+pipelineJob('CD/Dev/8)Redis') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('Job-Dsl/Redis-Infra-dev/Jenkinsfile')
+            }
+        }
+    }
+}
+
+pipelineJob('CD/Dev/9)postgres') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('Job-Dsl/postgresql-infra-Dev/Jenkinsfile')
+            }
+        }
+    }
+}
+
+pipelineJob('CD/Dev/9.1)SycllaDB') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('Job-Dsl/Scylla-Infra/Scylla_setup_DEV/Jenkinsfile')
+            }
+        }
+    }
+}
+
+pipelineJob('CI/Network-Skeleton') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('Network-Skeleton/CI/Jenkinsfile')
+            }
+        }
+    }
+}
+
+pipelineJob('CI/Autoscaling') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('Autoscaling/CI/Jenkinsfile')
+            }
+        }
+    }
+}
+
+pipelineJob('CI/terraform-module') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('terraform module CI/Jenkinsfile')
+            }
+        }
+    }
+}
