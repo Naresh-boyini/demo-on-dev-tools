@@ -1,0 +1,53 @@
+folder('QA-Ansible') {
+    description('This folder contains all the QA-Ansible role pipeline jobs')
+}
+
+pipelineJob('QA-Ansible/QA-Postgres') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('Job-Dsl/ QA-configure-Ansible-role/QA-Postgres/Jenkinsfile')
+            }
+        }
+    }
+}
+
+pipelineJob('QA-Ansible/QA-Scylla') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('Job-Dsl/ QA-configure-Ansible-role/QA-Scylla/Jenkinsfile')
+            }
+        }
+    }
+}
+pipelineJob('QA-Ansible/QA-redis') {
+    definition {
+        cpsScm {
+            scm {
+                git {
+                    remote {
+                        url('https://github.com/mygurkulam-p9/Jenkinsfiles.git')
+                        credentials('github-token1')
+                    }
+                    branch('main')
+                }
+                scriptPath('Job-Dsl/ QA-configure-Ansible-role/QA-redis/Jenkinsfile')
+            }
+        }
+    }
+}
